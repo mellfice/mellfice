@@ -1,7 +1,18 @@
-site_name: My Docs
+site_name: Mellfice Docs
+
 theme:
   name: material
-#  features:
-#    - navigation.top
-#    - search.suggest
-#    - content.code.copy
+  language: ru
+  features:
+    - navigation.top
+    - search.suggest
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Network:
+      - Обзор: Network/index.md
+      - Huawei:
+          - Базовая настройка VRP: Network/Huawei/index.md
+  - Linux:
+      - Обзор: Linux/index.md

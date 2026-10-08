@@ -1,17 +1,18 @@
-# Welcome to MkDocs
+# Mellfice Docs
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Личная база знаний по сетевым технологиям и Linux.
 
-## Commands
+## Разделы
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+- **[Network](Network/index.md)** — сетевое оборудование, протоколы, диагностика
+- **[Linux](Linux/index.md)** — администрирование Linux, полезные команды
 
-## Project layout
+## Структура документации
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+```
+docs/
+    index.md            # Эта страница
+    Network/            # Сетевые технологии
+        Huawei/         # Оборудование Huawei (VRP)
+    Linux/              # Linux
+```
