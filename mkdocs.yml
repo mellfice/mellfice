@@ -17,3 +17,5 @@ nav:
   - Linux:
       - Обзор: Linux/index.md
       - Команды Linux: Linux/Команды Linux.md
+  - Git:
+      - Основы: Git/git.md
