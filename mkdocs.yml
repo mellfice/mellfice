@@ -16,3 +16,4 @@ nav:
           - Базовая настройка VRP: Network/Huawei/index.md
   - Linux:
       - Обзор: Linux/index.md
+      - Команды Linux: Linux/Команды Linux.md
