@@ -2,11 +2,20 @@ site_name: Mellfice Docs
 
 theme:
   name: material
-  language: ru
-  features:
-    - navigation.top
-    - search.suggest
-    - content.code.copy
+  palette:
+    # Настройка для светлой темы
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Настройка для темной темы
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 
 nav:
   - Home: index.md
