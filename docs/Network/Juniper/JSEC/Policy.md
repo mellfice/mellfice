@@ -1,0 +1,39 @@
+- Policy - набор правил, который говорит устройству, как относится к транзитному трафику
+- После матча пакета в Policy (к примеру action = permit), создаются две записи в таблице сессий (прямой и обратной). Когда придет ответ, пакеты будут разрешены за счет того, что в таблице сессий есть запись. И проверок не будет
+- И обратная политики для зон не нужна. 
+- ![](https://remnote-user-data.s3.amazonaws.com/d2ez1finX2rTjjvmg08dvucWPTwZNKRlJxVikqIN1Hk2SxYZl4qhrmq2CqGi9yEUGkqfGE2Q6-_DiIsEWgj1yh44oSVWOINQ_OCtmUbwPTwXOQTKFfZmjC4Z0EldQG-R.png)
+- Устройство проверяет политики для транзитного трафика в следующем порядке:
+1. Zone-specific (zonal) policies
+2. Global policies
+3. Default policy
+- ![](https://remnote-user-data.s3.amazonaws.com/5aNQQXPlc5KgPjOSSXV_PHACjEEbPPgMdlHTmdtmWoWNM7xX6d-idV5RjL8NGuWi07BnMZiF5M9T6kAIB5BC9jobofK1HW3lYayzcwLGOEC0zUEDijgVCoyOfFLdt445.png)
+- Существуют так же глобальные политики. 
+- ![](https://remnote-user-data.s3.amazonaws.com/qatCVM5SysAjpisAPrTocNUhcsLMFNMJDsIzliCW20dKmS0oOK7iCKWOU3VE540ZmFpHfa2gcHcE1Eb7xXUyNLhn1lnm8EBpQzbLpPqibbYApWyZW3gCfOhe_UXWmJdX.png)
+- Дефолтную политику можно изменить.
+- 
+- Порядок политик имеет значение. Так же как и в firewall filters. Выше указываются более специфичные, ниже - более общие. После создания политики, по умолчанию, она создаются внизу списка
+- ![](https://remnote-user-data.s3.amazonaws.com/OWtptGwNEMd5gmFb3xjMNpDsEtnWU6xhzActFv1zlZM0JBSbVBc_-vYKHruZ0A3E-xjQjnzLzk-WZ0pwxc4-6IrbeR8qWtVkuYK5-oboJ9Yuk2iB4fA3UkFG2nLbTq7t.png)
+- В критериях нельзя просто указать сам IP или сеть. Можно ссылаться на адреса (точнее на сущность, которая создается с именем каким-то и уже там указывается адреса), на диапазон адресов, или address-set. Всё это создается в address-book
+- В общем, в моем понимании, address-book это сущность, которая аккумулирует в себе address или address-set. 
+- После создания address-book, она "присоединяется" к одной или нескольким зонам (attach zone  *name-zone* ). После этого политики могут использовать адреса из этого address-book.
+- ![](https://remnote-user-data.s3.amazonaws.com/h9LWsWCh8kwavD5VU6paC6NWm4-u6r1Bc8YK1HyvjlIbYEPuX1y1P6RbCMHP9hRIPzpm5WGa-pbv9ExtxcBCzxxTb30wTIn9_eJtW4HE8oCyUS-qzOdluPkJWV1M0wUX.png)
+- Для global policy используется global address book. 
+- ![](https://remnote-user-data.s3.amazonaws.com/sPwUdPFEmUxHw69kUeDTviB_BoPBHrWD8opplFcs4OyUoLRDPno4DMvI7wuaVczpddiNsQo195QLuoApFLg5egCs0Bl3tHbBoFa0sW4RsYVT-yEEjuQ14hGgWiQpG1rk.png)
+- Для работы с IPv6 нужно включить работу с v6 в forwarding-options. 
+- В address можно использовать DNS адреса.
+- 
+- Для application на устройстве уже предопределенно множество дефолтных сервисов (ftp, http, ssh). Все они начинаются со слова junos (junos-ssh...).
+- Все дефолтные можно посмотреть командой: **show groups junos-default applications** - скрытая команда
+- Можно так же создавать свои приложения: **set applications aplication ** ***name *** 
+- Приложения можно объединять в **application-set**
+- 
+- В policy action так же как и в фильтрах, только другие названия
+- permit = allow
+- deny = discard
+- reject = reject
+- Так же можно опционально логировать трафик или его считать.
+- Трафик, который был permit, можно дополнительно отправить на доп. проверки: firewall authentication, IDP, UTM)
+- **show security policies ****policy-name ** ***hr-to-public*** ** detail** - отображает информацию по политике, интерфейсам, зонам и т.д.** ** 
+- 
+- **show security flow session** - отображает текущую таблицу сессий. Можно фильтровать. Первая команда для t-shoot.
+- **show security policies hit-count** - показывает сколько раз сработала политика

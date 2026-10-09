@@ -1,0 +1,3 @@
+- Помимо обычной сессии на обычным портах, могут быть чуть сложнее сессии, которым необходимо несколько сессий, на неизвестных заранее портах. 
+- ![](https://remnote-user-data.s3.amazonaws.com/b7fcJBf-Z0Y8nUkzd5_cfwpYoLxiymhzfERu_nP3HHrRlh4UFzCuzfh7SrhOo8xAFR0pbFfbanmpRhOZtFBZATTFJz88y0FRC_SGcJBuRmNhJApI6v5XUfyiXJjcklPc.png)
+- ![](https://remnote-user-data.s3.amazonaws.com/f6EkwBrJoA1zrV4FlrcVaIODVUwosjFb__dP_d1zxzI9xfPpIZF80IWAXrdMn6KdEjXywt8VwNU0I90TWuWfH5bkxCCTU4QG3wpxkLNMoTesxkFdQc8-DEU4z4tXCkX4.png)

@@ -1,0 +1,2 @@
+- Можно создать расписание для политики, когда она будет работать
+- ![](https://remnote-user-data.s3.amazonaws.com/9M3Kw_WvqAvhvpZbVvP49Vks1REGSwwz2IjffN4cJcbrHnZgN9wuz42P0gYiVXewGY-MKm75EldhgZG4jcfdsKz_5dbuRVufk7UrmEMwAbGnn8UyuWiSdsyFpwb-BxM5.png)

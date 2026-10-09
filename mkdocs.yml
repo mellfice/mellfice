@@ -14,6 +14,17 @@ nav:
       - Обзор: Network/index.md
       - Huawei:
           - Базовая настройка VRP: Network/Huawei/index.md
+      - Juniper:
+          - JSEC:
+
+            - JSEC: Network/Juniper/JSEC/JSEC.md
+            - Zones: Network/Juniper/JSEC/Zones.md
+            - Policy: Network/Juniper/JSEC/Policy.md
+            - Session management: Network/Juniper/JSEC/Session management.md
+            - ALG: Network/Juniper/JSEC/ALG (Application layer gateway).md
+            - Policy Scheduling: Network/Juniper/JSEC/Policy Scheduling.md
+            - Logging: Network/Juniper/JSEC/Logging.md
+            - Troubleshooting zone and policy: Network/Juniper/JSEC/Troubleshooting zone and policy.md
   - Linux:
       - Обзор: Linux/index.md
       - Команды Linux: Linux/Команды Linux.md

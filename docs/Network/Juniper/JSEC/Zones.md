@@ -1,0 +1,21 @@
+- Zone - набор интерфейсов (возможно не только), к которым применяется единый набор политик безопасности. К примеру, зона - Интернет, зона - Локал. И создается политики прохождения между зонами. 
+- По умолчанию, весь трафик запрещен. Чтобы разрешить определенный к самому устройству, можно использовать host-inbound-traffic.
+- Интерфейс будет форвардить трафик, только тогда, когда он принадлежит не Null-zone.
+- Логический интерфейс нельзя определить в разные зоны
+- Зона должна находится внутри какого-то R-I (пусть даже master/grt).
+- Зона не может находится в разных R-I
+
+![](https://remnote-user-data.s3.amazonaws.com/cp7iRYXlZlTN9hnKTyvpXzsK_p-fBkXt5x3oJAZaI_XhoPh19qAoth4E_JD-hhTy85W3NTOCtzzUl8TX6ogcO11Y0NlMJdEZ29XIJClcTHbFievOBVuvI63BDrwps_Ul.png)
+- Существуют разные типы зон.
+- ![](https://remnote-user-data.s3.amazonaws.com/9HzUeeLiNXyPhUQaIHAbHb3jP7i3mMAbGW53nTbjfu-WbPoDzkrPMUuPMrE4xs5mp9msYHWL7OAfgvCePwyJp7t3afKM7zLdFqa57kWKDMlI1Un--WNmVqJTnC96oza8.png)
+- 
+- Security Zone - фильтровать транзитный траффик. Как правильно, предопределенных настроенных зон с таким типом нет. Политики нужны как для межзонного (interzone), так и внутризонного (intazone) трафика.
+- Functional Zone - зоны специального назначения. Не пропускает транзитный трафик. Используется для OOB management. Доступна только одна и должна называться management. Нельзя ссылаться в политиках.
+- Null Zone - не настраиваемая. Запрещает весь трафик с интерфейса в этой зоне. По умолчанию, каждый интерфейс принадлежит Null zone (кроме fxp0, me0, cluster interface). Когда удаляется интерфейс из любой другой зоны, он попадает в Null
+- Junos-host zone - фильтрует трафик, направленный на устройство, с помощью политик. Входящий трафик так же должен быть разрешен в security zone с помощью host-inbound-traffic. Позволяет более гранулировано настраивать политики. Можно считать, что в этой зоне находится RE. По умолчанию, весь исходящий трафик от устройства - разрешен.
+- На некоторых моделях доступны предопределенные зоны по умолчанию
+- ![](https://remnote-user-data.s3.amazonaws.com/lnGeBAFCPHr9-3oaM8QxaYDsxbLlMH_kJxn4nqTF3csu8Ci5y-kqtRqn6bZD4LAYHjmj8vmhL_M7NQcXWfGP8wRHqLUtC_A-f5ze-4rHyZOUby4hN86wCXu6r9yGkHa-.png)
+- ![](https://remnote-user-data.s3.amazonaws.com/lh4T56KFywLZ5-WNV4vE39lZqq4fvxqfJMQQtBt02HzprLnOsCYW7RxqEqEWPdhqE074xSx5YuHxNlMsNWgki0h7QfipxAPDgbzjWmFyS6EEwKxFvSuosuTBaAlUA0eQ.png)
+- **show security zones** - команда для просмотра настроенных зон и интерфейсов к ним
+- **show intreface .. extansive** - так же показывает доп. инфо с зонами по интерфейсам
+- Screen - устаревшая вещь, типа IDP (смотрит на L3, L4 уровне)

@@ -1,0 +1,7 @@
+- ОС для firewall работает на JunOS, сделанной на базе ScreenOS
+- Основной модуль PFE - flowd (фичи firewall)
+- Можно прокинуть пакет сразу на выход мимо flowd
+- Session Based = StateFull Based обработка пакета
+- ![](https://remnote-user-data.s3.amazonaws.com/ssMXYlkCL6SGV5vBc9inLfDoGIRqArp0MyPCrWyZ_b6CChFpjoLYYraslXUnoSeLnrEaC9gbtB9AT2llLR_BktIOcPnLI-j6bpYMbdaO_tZBDr5WVr_lg2Lx_Uzmby1Q.png)
+- При написании политики при прохождении пакетов из зоны в зону, в таблице сессий создается обе записи - прямая и обратная (from src to dst, from dst to src)
+- Вроде как, сначала обрабатывается фильтр на интерфейсе (per packet), только потом per-flow фичи отрабатывают.
