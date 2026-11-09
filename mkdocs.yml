@@ -35,7 +35,7 @@ nav:
             - Troubleshooting zone and policy: Network/Juniper/JSEC/Troubleshooting zone and policy.md
           - JNCIP:
             - L2VPN:
-                - Intro: Network/Juniper/JNCIP/L2VPN/Intro.md
+                - Refresher MPLS: Network/Juniper/JNCIP/L2VPN/Refresher MPLS.md
   - Linux:
       - Обзор: Linux/index.md
       - Команды Linux: Linux/Команды Linux.md
