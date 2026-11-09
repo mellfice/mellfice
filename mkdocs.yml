@@ -25,7 +25,6 @@ nav:
           - Базовая настройка VRP: Network/Huawei/index.md
       - Juniper:
           - JSEC:
-
             - JSEC: Network/Juniper/JSEC/JSEC.md
             - Zones: Network/Juniper/JSEC/Zones.md
             - Policy: Network/Juniper/JSEC/Policy.md
@@ -36,7 +35,7 @@ nav:
             - Troubleshooting zone and policy: Network/Juniper/JSEC/Troubleshooting zone and policy.md
           - JNCIP:
             - L2VPN:
-                - Intro: Network/Juniper/JNCIP/Intro.md
+                - Intro: Network/Juniper/JNCIP/L2VPN/Intro.md
   - Linux:
       - Обзор: Linux/index.md
       - Команды Linux: Linux/Команды Linux.md
