@@ -36,6 +36,7 @@ nav:
           - JNCIP:
             - L2VPN:
                 - Refresher MPLS: Network/Juniper/JNCIP/L2VPN/Refresher MPLS.md
+                - The Different Flavors of Layer 2 VPN: Network/Juniper/JNCIP/L2VPN/The Different Flavors of Layer 2 VPN.md
   - Linux:
       - Обзор: Linux/index.md
       - Команды Linux: Linux/Команды Linux.md
